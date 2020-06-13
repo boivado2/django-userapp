@@ -1,0 +1,32 @@
+{% extends 'userapp/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <form  class="form-1" method="POST">
+        {% csrf_token %}
+    <p>{{form|crispy}}</p> 
+    <button  class="btn btn-outline-info" type="submit">submit</button>
+
+
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            have an accout? <a class="ml-2" href="{% url 'userapp_login'%}">login</a>
+        </small>
+
+    
+
+    </form >
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
